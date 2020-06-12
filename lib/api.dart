@@ -2,7 +2,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 //COMUNICACAO COM O SERVER VIA JSON
-Future upload(file, algorithm) async {
+Future upload(file, algorithm,url) async {
 
   int response;
 
