@@ -84,7 +84,7 @@ TextEditingController _urlController = new TextEditingController();
 
 Widget urlPageStyle() {
 String text;
-if (_urlController.text == null) text = "URL já inserida: nenhuma.";
+if (_urlController.text == "") text = "URL já inserida: nenhuma.";
 else text = "URL já inserida: " + _urlController.text;
   return Scaffold(
       backgroundColor: Colors.white,
