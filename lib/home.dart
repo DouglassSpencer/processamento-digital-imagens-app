@@ -76,7 +76,7 @@ class HomeState extends State<Home> {
             });
           } else {
             _urlController = getUrl();
-            if(_urlController == null){
+            if(_urlController.text == ""){
               setState(() {
                 Get.snackbar("Erro", "Nenhuma URL inserida.",
                     duration: Duration(seconds: 3),
