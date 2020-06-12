@@ -7,7 +7,7 @@ Future upload(file, algorithm) async {
   int response;
 
   print("upload");
-  String body, url = "http://f6f8f8a9309a.ngrok.io/api/image";
+  String body;
 
   if (file == null) return;
 
