@@ -57,7 +57,7 @@ Widget algorithmPage(List<String> _image, File _originalImage, String algorithm)
       Column(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
         originalImageText(_originalImage, algorithm),
         Text(
-          "Imagem Negativa",
+          "\n\nImagem Negativa\n",
           style: TextStyle(color: Colors.indigo,fontSize: 18.0),
         ),
         _image == null
@@ -79,21 +79,21 @@ Widget algorithmPage(List<String> _image, File _originalImage, String algorithm)
       Column(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
         originalImageText(_originalImage, algorithm),
         Text(
-          "Limiar 64",
+          "\n\nLimiar 64\n",
           style: TextStyle(color: Colors.indigo, fontSize: 18.0),
         ),
         _image == null
             ? Container(child: Text("Não foi possível carregar a imagem"))
             : Image.memory(bin64),
         Text(
-          "Limiar 128",
+          "\n\nLimiar 128\n",
           style: TextStyle(color: Colors.indigo, fontSize: 18.0),
         ),
         _image == null
             ? Container(child: Text("Não foi possível carregar a imagem"))
             : Image.memory(bin128),
         Text(
-          "Limiar 200",
+          "\n\nLimiar 200\n",
           style: TextStyle(color: Colors.indigo, fontSize: 18.0),
         ),
         _image == null
@@ -117,39 +117,19 @@ Widget algorithmPage(List<String> _image, File _originalImage, String algorithm)
       Column(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
 
         originalImageText(_originalImage, algorithm),
-        Text(
-          "Histograma",
-          style: TextStyle(color: Colors.indigo),
-        ),
         if (_image.length == 0)
           Container(child: Text("Não foi possível carregar a imagem"))
         else
           Image.memory(sub4),
-        Text(
-          "RED",
-          style: TextStyle(color: Colors.indigo),
-        ),
         _image.length == 0
             ? Container(child: Text("Não foi possível carregar a imagem"))
             : Image.memory(sub8),
-        Text(
-          "GREEN",
-          style: TextStyle(color: Colors.indigo),
-        ),
         _image.length == 0
             ? Container(child: Text("Não foi possível carregar a imagem"))
             : Image.memory(sub16),
-        Text(
-          "BLUE",
-          style: TextStyle(color: Colors.indigo),
-        ),
         _image.length == 0
             ? Container(child: Text("Não foi possível carregar a imagem"))
             : Image.memory(sub32),
-        Text(
-          "GRAY",
-          style: TextStyle(color: Colors.indigo),
-        ),
         _image.length == 0
             ? Container(child: Text("Não foi possível carregar a imagem"))
             : Image.memory(sub64),
@@ -157,7 +137,6 @@ Widget algorithmPage(List<String> _image, File _originalImage, String algorithm)
     ]);
 
   }
-
   //TELA DE LAPLACIANO
   else if (algorithm == "laplace") {
 
@@ -169,22 +148,22 @@ Widget algorithmPage(List<String> _image, File _originalImage, String algorithm)
       Column(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
         originalImageText(_originalImage, algorithm),
         Text(
-          "Imagem Processada",
-          style: TextStyle(color: Colors.indigo),
+          "\n\nFiltro de tamanho 3\n",
+          style: TextStyle(color: Colors.indigo,fontSize: 18.0),
         ),
         _image == null
             ? Container(child: Text("Não foi possível carregar a imagem"))
             : Image.memory(mask3),
         Text(
-          "Imagem Processada",
-          style: TextStyle(color: Colors.indigo),
+          "\n\nFiltro de tamanho 5\n",
+          style: TextStyle(color: Colors.indigo,fontSize: 18.0),
         ),
         _image == null
             ? Container(child: Text("Não foi possível carregar a imagem"))
             : Image.memory(mask5),
         Text(
-          "Imagem Processada",
-          style: TextStyle(color: Colors.indigo),
+          "\n\nFiltro de tamanho 7\n",
+          style: TextStyle(color: Colors.indigo,fontSize: 18.0),
         ),
         _image == null
             ? Container(child: Text("Não foi possível carregar a imagem"))
@@ -206,43 +185,43 @@ Widget algorithmPage(List<String> _image, File _originalImage, String algorithm)
       Column(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
         originalImageText(_originalImage, algorithm),
         Text(
-          "Imagem Processada",
-          style: TextStyle(color: Colors.indigo),
+          "\n\nFiltro de tamanho 3 com valores absolutos\n",
+          style: TextStyle(color: Colors.indigo,fontSize: 18.0),
         ),
         _image == null
             ? Container(child: Text("Não foi possível carregar a imagem"))
             : Image.memory(absolut3),
         Text(
-          "Imagem Processada",
-          style: TextStyle(color: Colors.indigo),
+          "\n\nFiltro de tamanho 3 com valores deslocados\n",
+          style: TextStyle(color: Colors.indigo,fontSize: 18.0),
         ),
         _image == null
             ? Container(child: Text("Não foi possível carregar a imagem"))
             : Image.memory(shift3),
         Text(
-          "Imagem Processada",
-          style: TextStyle(color: Colors.indigo),
+          "\n\nFiltro de tamanho 5 com valores absolutos\n",
+          style: TextStyle(color: Colors.indigo,fontSize: 18.0),
         ),
         _image == null
             ? Container(child: Text("Não foi possível carregar a imagem"))
             : Image.memory(absolut5),
         Text(
-          "Imagem Processada",
-          style: TextStyle(color: Colors.indigo),
+          "\n\nFiltro de tamanho 5 com valores deslocados\n",
+          style: TextStyle(color: Colors.indigo,fontSize: 18.0),
         ),
         _image == null
             ? Container(child: Text("Não foi possível carregar a imagem"))
             : Image.memory(shift5),
         Text(
-          "Imagem Processada",
-          style: TextStyle(color: Colors.indigo),
+          "\n\nFiltro de tamanho 7 com valores absolutos\n",
+          style: TextStyle(color: Colors.indigo,fontSize: 18.0),
         ),
         _image == null
             ? Container(child: Text("Não foi possível carregar a imagem"))
             : Image.memory(absolut7),
         Text(
-          "Imagem Processada",
-          style: TextStyle(color: Colors.indigo),
+          "\n\nFiltro de tamanho 7 com valores deslocados\n",
+          style: TextStyle(color: Colors.indigo,fontSize: 18.0),
         ),
         _image == null
             ? Container(child: Text("Não foi possível carregar a imagem"))
@@ -264,42 +243,42 @@ Widget algorithmPage(List<String> _image, File _originalImage, String algorithm)
       Column(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
         originalImageText(_originalImage, algorithm),
         Text(
-          "Detecção de linhas com limiar 80",
+          "\n\nDetecção de linhas com limiar 80\n",
           style: TextStyle(color: Colors.indigo,fontSize: 18.0),
         ),
         _image == null
             ? Container(child: Text("Não foi possível carregar a imagem"))
             : Image.memory(lines1),
         Text(
-            "Detecção de linhas com limiar 115",
+            "\n\nDetecção de linhas com limiar 115\n",
             style: TextStyle(color: Colors.indigo,fontSize: 18.0),
         ),
         _image == null
             ? Container(child: Text("Não foi possível carregar a imagem"))
             : Image.memory(lines2),
         Text(
-          "Detecção de linhas com limiar 150",
+          "\n\nDetecção de linhas com limiar 150\n",
           style: TextStyle(color: Colors.indigo,fontSize: 18.0),
         ),
         _image == null
             ? Container(child: Text("Não foi possível carregar a imagem"))
             : Image.memory(lines3),
         Text(
-          "Detecção de círculos com raio máximo de 50",
+          "\n\nDetecção de círculos com raio máximo de 50\n",
           style: TextStyle(color: Colors.indigo,fontSize: 18.0),
         ),
         _image == null
             ? Container(child: Text("Não foi possível carregar a imagem"))
             : Image.memory(circles1),
         Text(
-          "Detecção de círculos com raio máximo de 150",
+          "\n\nDetecção de círculos com raio máximo de 150\n",
           style: TextStyle(color: Colors.indigo,fontSize: 18.0),
         ),
         _image == null
             ? Container(child: Text("Não foi possível carregar a imagem"))
             : Image.memory(circles2),
         Text(
-          "Detecção de círculos com raio máximo de 250",
+          "\n\nDetecção de círculos com raio máximo de 250\n",
           style: TextStyle(color: Colors.indigo,fontSize: 18.0),
         ),
         _image == null
@@ -321,29 +300,29 @@ Widget algorithmPage(List<String> _image, File _originalImage, String algorithm)
       Column(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
         originalImageText(_originalImage, algorithm),
         Text(
-          "Imagem Processada",
-          style: TextStyle(color: Colors.indigo),
+          "\n\n3 Clusters\n",
+          style: TextStyle(color: Colors.indigo,fontSize: 18.0),
         ),
         _image == null
             ? Container(child: Text("Não foi possível carregar a imagem"))
             : Image.memory(kmeans1),
         Text(
-          "Imagem Processada",
-          style: TextStyle(color: Colors.indigo),
+          "\n\n5 Clusters\n",
+          style: TextStyle(color: Colors.indigo,fontSize: 18.0),
         ),
         _image == null
             ? Container(child: Text("Não foi possível carregar a imagem"))
             : Image.memory(kmeans2),
         Text(
-          "Imagem Processada",
-          style: TextStyle(color: Colors.indigo),
+          "\n\n7 Clusters\n",
+          style: TextStyle(color: Colors.indigo,fontSize: 18.0),
         ),
         _image == null
             ? Container(child: Text("Não foi possível carregar a imagem"))
             : Image.memory(kmeans3),
         Text(
-          "Imagem Processada",
-          style: TextStyle(color: Colors.indigo),
+          "\n\n10 Clusters\n",
+          style: TextStyle(color: Colors.indigo,fontSize: 18.0),
         ),
         _image == null
             ? Container(child: Text("Não foi possível carregar a imagem"))
@@ -361,7 +340,7 @@ Widget originalImageText(_image,algorithm){
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         Text(
-          "Imagem original",
+          "Imagem original\n",
           style: TextStyle(color: Colors.indigo, fontSize: 18.0),
         ),
         _image == null
@@ -377,22 +356,110 @@ Widget algorithmText(String algorithm) {
   String text;
 
   if (algorithm == "histogram") {
-    text = "O histograma de uma imagem indica a quantidade de pixels que a imagem tem de um determinado nível de cinza ou cor. Na figura abaixo temos os histogramas dos canais R, G, B e da escala cinza. Logo abaixo temos a apresentação desses canais.";
+    text = "Não sabe o que é um histograma? Peraí que já te conto!"
+            "O histograma de uma imagem é um gráfico que mostra a "
+            "quantidade de pixels que a imagem de cada nível de cinza "
+            "(em uma imagem em tons de cinza) ou nível de uma cor. Só "
+            "isso! Na figura abaixo temos os histogramas dos canais RGB "
+            "(vermelho, verde e azul) e da escala cinza. Logo após temos "
+            "a representação desses canais.";
   } else if (algorithm == "negative") {
-    text = "O efeito negativo inverte todas as cores da imagem original.";
+    text = "O negativo é um efeito bastante conhecido, facilmente encontrada na maioria"
+        " dos editores de imagem. Mas, convenhamos, melhor que utilizar os filtros dos"
+        " editores de imagens é usar sabendo como ele fez esse feito impressionante! "
+        "Vamos lá! O efeito negativo não tem segredo! Basicamente, o filtro negativo"
+        " inverte as cores de uma imagem. Sim, só isso, viu que não é nada mirabolante!"
+        " Talvez, você esteja se pergutando \"Afinal, o que é inverter uma cor?\". Vamos considerar"
+  " que temos uma imagem codificada com 8 bits, isso significa que temos 256 níveis."
+  " Como eu cheguei nisso? Basta fazer 2^8 e a mágica está feita! (lembre-se que é de 0"
+  " a 255, hein!?). Agora que já sabemos isso, para inverter a cor de um pixel é só usar"
+  " isso aqui: \n\npixel = 255 - pixel_original\n\n Pronto, você acabou de aprender como"
+  " fazer o efeito negativo!";
   } else if (algorithm == "bin") {
-    text = "No processo de binarizar uma imagem, o que ocorre é o seguinte: primeiro a imagem é convertida para tons de cinza. Com isso, agora ela só tem uma cor porém com intensidades diferentes. Depois disso, um valor entre 0 e 255 é escolhido, chamado de limiar. Pixels com intensidades acima do limiar se tornam brancos e pixels abaixo do limiar se tornam pretos. Exemplos: na primeira imagem o limiar é 64, na segunda, 128 e na terceira, 200.";
+    text = "A binarização de uma imagem é uma técnica muito legal e muito útil"
+        " em diversas aplicações. Basicamente, essa técnica codifica a sua"
+        " utilizando dois bits, usualmente, 0 e 1. Onde o 0 corresponde a cor"
+        " preta e o 1 a cor branca. Tá, mas tenha calma, você não deve sair"
+        " mudando os pixels para 0 e 1 indiscriminadamente não, por favor!"
+        " Vamos entender o processo! A primeira coisa que você precisa é ter"
+        " uma imagem em tons de cinza, se sua imagem for colorida, será necessário"
+        " realizar um conversão! Depois da conversão, temos uma imagem com valores"
+        " que podem variar entre 0 e 255 (Lembre-se que 0 a 255 é quando a imagem foi"
+    " codificada com 8 bits!). Assim, para binarizar a imagem escolhemos um valor "
+  "entre 0 e 255 e mudamos o valor do pixel seguindo o seguinte critério: "
+  "todos os pixels acima desse valor tornam-se branco = 1 e todos abaixo desse valor"
+  " tornam-se preto = 0. Esse valor escolhido é chamado de limiar. Vamos ver alguns"
+  " exemplos! Vou apresentar pra você três imagens, a primeira foi binarizada com"
+  " valor de limiar de 64 a segunda com 128 e a terceira com 200. Sentiu a diferença"
+  " que a escolha do limiar gera no resultado final?";
   } else if (algorithm == "subsampling") {
-    text = "Aplicar subamostragem";
+    text = "A subamostragem de uma imagem consiste na redução de sua resolução "
+        "espacial mantendo a mesma representação da imagem. Para realizar uma "
+        "subamostragem, deve-se escolher por qual fator os pixels serão "
+        "selecionados. Dado um fator X tal que X > 0, seleciona-se 1 pixel "
+        "para a subamostragem a cada X linhas e colunas da imagem. Para X = 1, "
+        "o resultado da subamostragem será a imagem original. Nas figuras "
+        "abaixo temos subamostragens da imagem por 4, 8, 16, 32 e 64";
   } else if (algorithm == "laplace") {
-    text = "Aplicar Laplace";
+    text = "Assim como o filtro Sobel, o filtro de Laplace é um filtro linear "
+        "passa-alta. Há diferentes máscaras para o filtro de laplace. "
+        "Abaixo temos uma máscara laplaciana invariante a 90º. Devido à u"
+        "tilização de apenas uma máscara para variações de bordas nos eixos "
+        "x e y da imagem, este filtro é dito ser de derivada à segunda.\n\n"
+        "         0   -1    0\n"
+        "G  =  -1    4    -1    \n"
+        "         0   -1    0\n\n"
+        "Olha esses exemplos aqui:\n";
   } else if (algorithm == "sobel") {
-    text = "Aplicar sobel";
+    text = "O filtro de Sobel é um filtro linear passa-alta que utiliza duas "
+        "máscaras, que chamaremos de Gx e Gy. \n\n"
+        "         -1   -2   -1               -1    0    -1\n"
+        "Gx =  0    0    0     Gy = -2    0    -2\n"
+        "         -1   -2   -1               -1    0    -1\n"
+        "\nNestas máscaras, Gx realça bordas horizontais e Gy realça bordas "
+        "verticais. Para cada pixel da imagem de entrada, tanto a máscara "
+        "Gx, quanto a máscara Gy, resultam em um valor de gradiente cada. "
+        "A magnitude do vetor gradiente, na imagem de saída, a "
+        "partir destas máscaras, é dada pela raíz quadrada da soma dos "
+        "quadrados de Gx e Gy. Dá uma olhada em alguns exemplos.\n";
   } else if (algorithm == "hough") {
     text =
-    "A Transformada de Hough é uma técnica matemática que realiza a detecção de formas geométricas em imagens digitais. Em sua forma original a transformada de Hough foi elaborada por Paul Hough em 1962. Sua primeira concepção estava baseada na localização de retas. Posteriormente, a transformada de Hough foi estendida para possibilitar a localização de outras formas geométricas que possam ser parametrizadas, tais como círculos e elipses. Como exemplo, aqui apresentaremos a deteccção de retas e de círculos. Na detecção de retas, é preciso determinar um limiar. Na primeira figura temos 80 de limiar, na segunda, 115 e na terceira 150. Já na detecção de círculos, precisamos estabelecer o raio máximo dos círculos detectados. Na quarta figura temos 50 de raio máximo, na quinta, 150 e na última, 250. ";
+    "A Transformada de Hough é uma técnica matemática que realiza a detecção "
+        "de formas geométricas em imagens digitais. Em sua forma original a "
+        "transformada de Hough foi elaborada por Paul Hough em 1962. Sua "
+        "primeira concepção estava baseada na localização de retas. "
+        "Posteriormente, a transformada de Hough foi estendida para "
+        "possibilitar a localização de outras formas geométricas que possam "
+        "ser parametrizadas, tais como círculos e elipses. Como exemplo, aqui "
+        "apresentaremos a deteccção de retas e de círculos. Na detecção de "
+        "retas, é preciso determinar um limiar. Na primeira figura temos 80 "
+        "de limiar, na segunda, 115 e na terceira 150. Já na detecção de "
+        "círculos, precisamos estabelecer o raio máximo dos círculos "
+        "detectados. Na quarta figura temos 50 de raio máximo, na quinta, "
+        "150 e na última, 250. ";
   } else if (algorithm == "kmeans") {
-    text = "Aplicar K-Means";
+    text = "O K-Means é um algoritmo de agrupamento de dados. A ideia do algoritmo "
+        "é muito simples! Imagine que temos um conjunto de dados, esses dados "
+        "são, por exemplo, frutas. Sabemos que as frutas possuem algumas "
+        "características, então o objetivo do algoritmo é agrupar esses frutas "
+        "de acordo com suas características. Um detalhe importante do algoritmo "
+        "K-means é que ele necessita que você diga quantos grupos você quer criar. "
+        "Esse número de grupos é o parâmetro K. Para um conjunto de dados com K"
+        " grupos temos K centroides. Você deve estar se perguntando, mas o que é"
+        " um centroide? Calma, vou explicar. O centroide representa o ponto médio"
+        " do cluster. Ok, mas, qual a necessidade do centroide? Imagine que temos"
+        " queremos agrupar as frutas em três grupos (A, B e C). Selecionamos uma"
+        " fruta aleatoriamente e verificamos que ela possui um distância para o centroide A = 1,"
+    " para o B = 10 e para o C = 20. Essa fruta será associada ao grupo A, pois o"
+        " objetivo é ter um grupo onde as frutas tenham a menor distância possível"
+        " do centroide. Isso é o que chamamos de coesão. Mas, para termos bons grupos"
+        " não precisamos apenas de coesão, precisamos, também, do conceito de separação,"
+        " que significa que o grupo A, por exemplo, deve ser o mais separado possível"
+         "do grupos B e C. Agora vamos pensar nisso em uma aplicação em imagens! No "
+        " processamento de imagens, não temos frutas temos pixels e os grupos são uma"
+         "determinada cor. Então, a característica utilizada para agrupar os pixels são"
+    " as cores. Ao aplicar o K-Means em uma imagem e escolher um valor de K, a imagem"
+  "de saída terá k cores. Bora lá ver como como fica o resultado disso!";
   }
 
   return Text(text, textAlign: TextAlign.justify, style: TextStyle(fontSize: 16.0),);
