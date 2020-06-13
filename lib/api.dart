@@ -59,6 +59,7 @@ Future upload(file, algorithm,url) async {
       image.add(dataImageJson['circles1']);
       image.add(dataImageJson['circles2']);
       image.add(dataImageJson['circles3']);
+
     } else if (algorithm == "subsampling") {
       image.add(dataImageJson['sub4']);
       image.add(dataImageJson['sub8']);
@@ -91,5 +92,7 @@ Future upload(file, algorithm,url) async {
   print("fim upload");
   return image;
 }
+
+
 
 
