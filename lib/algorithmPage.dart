@@ -465,3 +465,4 @@ Widget algorithmText(String algorithm) {
   return Text(text, textAlign: TextAlign.justify, style: TextStyle(fontSize: 16.0),);
 }
 
+
